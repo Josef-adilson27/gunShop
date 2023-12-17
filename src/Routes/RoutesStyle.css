@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* основной блок роутинга*/
+.routeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 190px;
+  height: auto;
+  width: 100%;
+  height: auto;
+}
+
+/*grid-блок для товаров*/
+.ProductsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  width: 100%;
+  height: auto;
+  grid-row-gap: 30px;
+}
+
+/* ProductsCells - основной размер grid элементов (товары) в следующих компонентах: Ammo,rifledGun,optics,pistols,smoothbore*/
+/* ProductsCells - применяется поверх самого компонента productCard  */
+.ProductsCells {
+  height: 400px;
+  width: 300px;
+  border: 1px solid silver;
+  border-radius: 10px;
+}
+
+/* кнопка вернутся*/
+/* если размер дисплея меньше 768px - кнопка backBtn скрывается*/
+/* если размер дисплея меньше 768px - выявляется такая же кнопка backLogoHeader в компоненте header*/
+.backBtn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  background-color: rgb(211, 182, 20);
+  border-radius: 5px;
+}
+
+/* кнопка cкрывается backBtn*/
+@media (max-width: 768px) {
+  .backBtn {
+    display: none;
+  }
+  .ProductsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ProductsCells {
+    width: 200px;
+    height: 290px;
+  }
+}
+@media (max-width: 650px) {
+  .ProductsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 425px) {
+  .ProductsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ProductsCells {
+    width: 170px;
+    height: 270px;
+  }
+}
+@media (max-width: 375px) {
+  .ProductsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ProductsCells {
+    width: 150px;
+    height: 230px;
+  }
+}/*# sourceMappingURL=RoutesStyle.css.map */

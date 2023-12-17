@@ -1,0 +1,129 @@
+
+.selectedCard{
+    position: absolute;
+    left: 0;
+    top: 170px;
+    width: 100vw;
+    height: 80vh;
+    background-color: antiquewhite;
+  
+}
+
+.selectedProduct-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  
+}
+
+.selectedProduct{
+    display: flex;
+    border: 1px rgb(130, 26, 26) solid; 
+    width: 80%;
+    height: 80%;
+    margin-bottom: 10px;   
+}
+
+.left-side-box{  
+     & p{
+        margin: 0;
+        padding: 0;
+     }
+
+    width: 300px;
+    height: 100%;
+  
+    color: white;
+    
+     & div:nth-child(1){
+        width: 100%;
+        height: 50%;
+        background-color:  rgb(211, 182, 20);
+     }
+     
+     & div:nth-child(2){ 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        background-color: rgb(35, 35, 35);
+        padding: 10px;
+        box-sizing: border-box;
+        
+        & button{
+            border: none;
+            padding: 0;
+            height: 40px;
+            width: 50%;
+            transition: all 0.6s;
+            font-size: 1rem;    
+            background-color:  rgb(211, 182, 20);
+        }
+        & button:hover{ 
+            cursor: pointer;
+            padding: 5px;
+            background-color:  rgb(211, 182, 20);
+            width: 60%;  
+            transition: all 0.6s;
+            border-radius:   10px; 
+        }
+     }
+    
+}
+
+.right-side-box{
+    overflow-y: auto; 
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255);
+    & img{
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+.right-side-box-tex{
+    word-wrap: break-word;
+}
+.backLogoCart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50px;
+    border: none;
+    box-sizing: content-box;
+    color: aliceblue;
+    background-color:  rgb(211, 182, 20);
+   
+}
+
+@media (max-width: 768px){ 
+    .selectedProduct{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px rgb(158, 158, 158) solid; 
+        width: 80%;
+        height: 80%;
+        margin-bottom: 10px;   
+    }
+
+    .left-side-box{ 
+        width: 100%;
+        height: 500px;
+       
+    }
+   .right-side-box{
+    width: 100%;
+   }
+
+
+}

@@ -1,0 +1,14 @@
+@import url(./Header/Header.scss);
+@import url(./BaseContent/SaleSlider.scss);
+@import url(./BaseContent/ProductContainer.scss);
+@import url(./Footer/Footer.scss);
+@import url(./Routes/RoutesStyle.scss);
+@import url(./Routes/ProductCard/ProductCard.scss);
+@import url(./Routes/ProductCard/selectedCard.scss);
+@import url(./form/form.scss);
+@import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300;400;500&display=swap");
+body {
+  overflow-x: hidden;
+  background-color: rgb(31, 34, 34);
+}/*# sourceMappingURL=index.css.map */

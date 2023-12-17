@@ -1,0 +1,22 @@
+.searching{
+    border-radius: 10px;
+    width: 40%;
+    position: absolute;
+    top: 90px;
+    background-color: rgb(185, 185, 185);
+    
+}
+
+@media (max-width: 768px){
+    .searching{
+        top: 130px;
+        width: 90%;   
+    }
+}
+
+@media (max-width: 426px){
+    .searching{
+        top: 120 px;
+        width: 90%;   
+    }
+}
