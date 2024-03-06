@@ -20,7 +20,7 @@ const email    = (
 
 const Footer = () => {
     return (
-        <div className='footer'>
+        <footer className='footer'>
              
          <div className='contacts'>    
             <h3>Contact us</h3>
@@ -45,7 +45,7 @@ const Footer = () => {
             <p>Privacy policy</p>
             <p>Returns policy</p> 
            </div>   
-        </div>
+        </footer>
     );
 }
 

@@ -11,9 +11,7 @@ const SelectedCard = () => {
     </svg>
 )  
 
-    //скрываем Header сразу при переходе
-   //hide Header immediately upon first render
-    useEffect(()=>{dispatch(isHeaderHidden(true))},[dispatch])
+   
    
     const dispatch = useDispatch()
     const {Products } = useSelector(state=>state.Data) 

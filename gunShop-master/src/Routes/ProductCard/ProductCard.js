@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {useDispatch,useSelector} from 'react-redux'
-import {isHeaderHidden} from '../../redux/MainSlise'
+
 
 const ProductCard = ({item}) => {
     
     const dispatch = useDispatch()
 
     //выявляем Header после его сокрытия при переходе selectedCards
-    useEffect(()=>{dispatch(isHeaderHidden(false))},[dispatch])
+
   
     return (
         <div className='productCard'>

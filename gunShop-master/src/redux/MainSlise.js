@@ -5,7 +5,6 @@ const initialState = {
    SearchingElements: [],
    UniqueCartProducts:localStorage.getItem("UniqueCartProducts") ? JSON.parse(localStorage.getItem("UniqueCartProducts")):[],
    CartProducts:[],
-   HeaderHideBoolean: false,
    FormHideBoolean: false,
    CartHiddenBoolean: false,
    PriceState: {
@@ -29,6 +28,8 @@ const MainSlice = createSlice({
     state.UniqueCartProducts = [...filt]
    },
    remove:(state,action)=>{
+    state.PriceState.quantity = 0;
+    state.PriceState.total = 0;
     state.UniqueCartProducts = state.UniqueCartProducts.filter(item=>{ return item.id!==action.payload.id})
     localStorage.setItem("UniqueCartProducts",JSON.stringify(state.UniqueCartProducts))
    },
@@ -41,7 +42,9 @@ const MainSlice = createSlice({
       localStorage.setItem("UniqueCartProducts",JSON.stringify(state.UniqueCartProducts))
    },
    clearCart:(state,)=>{
-    state.UniqueCartProducts = []
+    state.UniqueCartProducts = [];
+    state.PriceState.quantity = 0;
+    state.PriceState.total = 0;
     localStorage.setItem("UniqueCartProducts",JSON.stringify(state.UniqueCartProducts))
    },
    decrement:(state,action)=>{
@@ -53,16 +56,14 @@ const MainSlice = createSlice({
        localStorage.setItem("UniqueCartProducts",JSON.stringify(state.UniqueCartProducts))
      }
    },
-   isHeaderHidden:(state,action)=>{
-      state.HeaderHideBoolean = action.payload
-   },
+ 
    isFormHidden:(state,)=>{
     state.FormHideBoolean = !state.FormHideBoolean
    },
    isCartHidden:(state,)=>{
     state.FormHideBoolean = !state.FormHideBoolean
    },
-   PriceFunction:(state,action)=>{
+   PriceFunction:(state)=>{
     let a = 0;
     let b = 0;
       state.UniqueCartProducts.map(item=>{

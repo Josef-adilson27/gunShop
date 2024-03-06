@@ -61,7 +61,7 @@ const App = () => {
   }, [Products]);
 
   return (
-    <div className="App">
+    <main className="App">
       <Header />
       <Form />
 
@@ -86,7 +86,7 @@ const App = () => {
       {/* The Footer is in the BaseContent for the possibilty of its hidding when routing uses 
            Компонент Footer находится в компоненте BaseContent (в  "/") ради возможнсти его сокрытия во время маршрутизации
       */}
-    </div>
+    </main>
   );
 };
 export default App;
